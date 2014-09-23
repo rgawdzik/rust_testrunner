@@ -1,4 +1,4 @@
-[package]
+[project]
 name = "rust_testrunner"
 version = "0.0.1"
 authors = ["Robert Gawdzik ☢ <robertgawdzik@gmail.com>"]
