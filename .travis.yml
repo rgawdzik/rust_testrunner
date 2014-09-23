@@ -1,9 +1,11 @@
+global:
+  - LD_LIBRARY_PATH=/usr/local/lib
 before_install:
-  - sudo add-apt-repository --yes ppa:hansjorg/rust
-  - sudo add-apt-repository --yes ppa:cmrx64/cargo
-  - sudo apt-get update -qq
+  - yes | sudo add-apt-repository ppa:cmrx64/cargo
+  - sudo apt-get update
 install:
-  - sudo apt-get install -qq rust-nightly cargo
+  - sudo apt-get install cargo
+  - curl http://static.rust-lang.org/rustup.sh | sudo sh -
 script:
-  - cargo build --verbose
-
+  - rustc --version
+  - cargo build
